@@ -1,0 +1,107 @@
+create database etic
+
+use etic
+create table Users(
+id int primary key not null,
+username_ nvarchar(50),
+password_ nvarchar(38),
+namesurname nvarchar(856),
+email nvarchar(232),
+gender nvarchar(323),
+birthdate date,
+createdoate date,
+telnr1 int not null,
+telnr2 int)
+
+use etic
+create table Adress(
+id int foreign key (id) REFERENCES Users(id),
+userid nvarchar(50),
+countryid nvarchar(123),
+cityid nvarchar(87),
+townid nvarchar(241),
+districtid int,
+postalcode int,
+addresstext nvarchar(51))
+
+use etic
+create table Cities(
+id int foreign key (id) REFERENCES Users(id),
+countryid int,
+city nvarchar(878))
+
+use etic
+create table Countries(
+id int foreign key (id) REFERENCES Users(id),
+country nvarchar(87))
+
+use etic
+create table Orderdetails(
+id int foreign key (id) REFERENCES Users(id),
+orderid nvarchar(635),
+itemid nvarchar(857),
+amount int,
+unitprice int,
+linetotal int)
+
+use etic
+create table Items(
+id int foreign key (id) REFERENCES Users(id),
+itemcode int,
+itemname nvarchar(56),
+unitprice int,
+category1 nvarchar(75),
+category2 nvarchar(75),
+category3 nvarchar(96),
+category4 nvarchar(36),
+brand nvarchar(69))
+
+use etic 
+create table Towns(
+id int foreign key (id) REFERENCES Users(id),
+cityid nvarchar(98),
+town nvarchar(74))
+
+use etic 
+create table Districts(
+id int foreign key (id) REFERENCES Users(id),
+townid int,
+district nvarchar(50))
+
+use etic
+create table Payments(
+id int foreign key (id) REFERENCES Users(id),
+Orderid int,
+paymenttype nvarchar(98),
+date_ date,
+isok int,
+approvecode int,
+paymenttotal int)
+
+use etic
+create table Orders(
+id int foreign key (id) REFERENCES Users(id),
+userid nvarchar(123),
+date_ date,
+totalprice int,
+status_ nvarchar(123),
+addressid nvarchar(87))
+
+use etic
+create table Invoices(
+id int foreign key (id) REFERENCES Users(id),
+orderid nvarchar(123),
+date_ date,
+addressid nvarchar(65),
+cargoficheno nvarchar(132),
+totalprice int)
+
+use etic
+create table Invoicedetails(
+id int foreign key (id) REFERENCES Users(id),
+invoiceid int,
+orderdetailid int,
+itemid int,
+amount int,
+unitprice int,
+linetotal int)
