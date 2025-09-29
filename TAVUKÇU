@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+  </head>
+
+  <body>
+    <h1> HATAsız'YLI TAVUKÇU </h1>
+    <img width="300" height="200" alt="Resim Yok"
+src="https://i.ytimg.com/vi/NTas0gOgxqc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDa1d1FkUnnj-aNnz0hvmUOh7gRDQ">
+<form>
+  <br> <label>Ad:</label>
+  <input type ="text"/> <br>
+  <label>Soyad:</label>
+  <input type ="text"/> <br>
+  <label>Şifre:</label>
+  <input type ="password"/> <br>
+  <label>Mail:</label>
+  <input type ="text"/> <br>
+  <button>Gonder</button> <br> <br>
+<form>
+   <h2>Dürümler</h2>
+   <mark>Martı DÜRÜM 60 TL</mark> <br>
+  <mark>Ekonomik DÜRÜM 100 TL</mark> <br>
+   <mark>Klasik DÜRÜM 130 TL</mark> <br>
+   <mark>Büyük Boy Dürüm 180 TL</mark> <br>
+   <mark>Ultra DÜRÜM 250 TL</mark> <br>
+  <h2>İçecekler</h2>
+  <mark>Coca Cola 250 ML 60 TL</mark> <br>
+  <mark>RedBull 300 ML 100 TL</mark> <br>
+   <mark>Liptop Ice Tea 250 Ml 55 TL</mark> <br>
+   <mark>Küçük Ayran 200 ML 40 TL</mark> <br>
+   <mark>Büyük Ayran 60 TL</mark> <br>
+   <h2>Kurye Tercihi</h2>
+  <mark>Ücretsiz Kurye 60-75 Dakika</mark> <br>
+   <mark>Ucuz Kurye 30 TL 35-45 Dakika</mark> <br>
+    <mark>Klasik Kurye 40 TL 20-25 Dakika</mark> <br>
+     <mark>Pahalı Kurye 60 TL 5-10 Dakika</mark> <br>
+  </body>
+</html>
