@@ -1,0 +1,68 @@
+DECLARE @sayii int=3;
+DECLARE @ogrNo INT;
+DECLARE @ad VARCHAR(50);
+DECLARE @sayi INT, @adi VARCHAR (50);
+SET @ogrNo = 23;
+SET @ad = 'Ozan Asik';
+SELECT @sayi = 7; 
+
+create database kutuphane
+use kutuphane 
+create table ogrenci(
+id int primary key,
+ad nvarchar(50));
+
+DECLARE @sayim int =10;
+if @sayim > 10
+begin 
+print 'sayi 10 dan büyük'
+end
+
+else if @sayim < 10
+begin
+print 'sayi 10 dan küçük'
+end
+
+else
+begin
+print 'sayinin degeri='+@sayim
+end
+
+declare @sayi1 int=4;
+declare @sayi2 int=5;
+declare @sayi3 int=6;
+declare @enbuyuksayi int;
+set @enbuyuksayi =  @sayi1
+if @sayi2>@enbuyuksayi
+print cast(replace(@sayi2,'sayi2 en büyük','')as int);
+else if @sayi3>@enbuyuksayi 
+print cast(replace(@sayi3,'sayi3 en büyük','')as int);
+else
+print cast(replace(@sayi1,'sayi1 en büyük','')as int);
+
+
+
+declare @sayi4 int;
+set @sayi4 = 5;
+
+if @sayi4 < 2
+    print @sayi4;
+else if @sayi4 >= 2 and @sayi4 <= 7
+begin
+    declare @kare int;
+    set @kare = @sayi4 * @sayi4;
+    print @kare;
+end
+else if @sayi4 >= 8 and @sayi4 <= 10
+begin
+    declare @kup int;
+    set @kup = @sayi4 * @sayi4 * @sayi4;
+    print @kup;
+end
+else
+begin
+    declare @ikikati int;
+    set @ikikati = @sayi4 * 2;
+    print @ikikati;
+end;
+
