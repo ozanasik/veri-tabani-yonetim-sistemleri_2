@@ -1,0 +1,38 @@
+CREATE DATABASE okul;
+USE okul;
+
+CREATE TABLE Ogrenciler (
+    ogrNo INT PRIMARY KEY,
+    ogrAdi NVARCHAR(100),
+    ogrSoyadi NVARCHAR(100)
+);
+
+INSERT INTO Ogrenciler VALUES (1, 'Ozan', 'Aşık');
+INSERT INTO Ogrenciler VALUES (2, 'Fatma Nur', 'Kılıçkaya');
+
+SELECT * FROM Ogrenciler;
+
+DECLARE @ogrNo INT, @ogrAdi NVARCHAR(100), @ogrSoyadi NVARCHAR(100);
+
+DECLARE CRS CURSOR FOR
+SELECT ogrNo, ogrAdi, ogrSoyadi FROM Ogrenciler;
+
+OPEN CRS;
+FETCH NEXT FROM CRS INTO @ogrNo, @ogrAdi, @ogrSoyadi;
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    IF @ogrNo % 2 = 0
+    BEGIN
+        PRINT @ogrAdi + '--' + @ogrSoyadi;
+    END
+    ELSE
+    BEGIN
+        PRINT @ogrAdi + '-' + @ogrSoyadi;
+    END
+
+    FETCH NEXT FROM CRS INTO @ogrNo, @ogrAdi, @ogrSoyadi;
+END
+
+CLOSE CRS;
+DEALLOCATE CRS;
